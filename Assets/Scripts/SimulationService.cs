@@ -59,7 +59,7 @@ public class SimulationService : MonoBehaviour {
         {
             MoleculeInfo moleculeInfo = new MoleculeInfo();
             moleculeInfo.Position = AllMoleculeInScene[i].transform.position;
-            moleculeInfo.Rotation = AllMoleculeInScene[i].transform.eulerAngles;
+            moleculeInfo.Rotation = AllMoleculeInScene[i].GetComponent<ObjectDrag>().Atom.transform.eulerAngles;
             moleculeInfo.MoleculeName = AllMoleculeInScene[i].GetComponent<MoleculeIdenti>().Name;
 
             moleculeInfos.Add(moleculeInfo);
@@ -80,7 +80,7 @@ public class SimulationService : MonoBehaviour {
         molecule.GetComponent<MoleculeIdenti>().simulationService = this;
         molecule.GetComponent<MoleculeIdenti>().Name = name;
         molecule.transform.position = position;
-        molecule.transform.eulerAngles = rotation;
+        molecule.GetComponent<ObjectDrag>().Atom.transform.eulerAngles = rotation;
         molecule.name = name.ToString();
         AllMoleculeInScene.Add(molecule);
         AddToSceneUIList(molecule.name);
@@ -113,7 +113,7 @@ public class SimulationService : MonoBehaviour {
             {
                 print(AllMoleculeInScene[i] + " Deleted");
                 Destroy(MoleculeNameUIList[i].gameObject, 0);
-                Destroy(AllMoleculeInScene[i].gameObject, 0);
+                Destroy(AllMoleculeInScene[i], 0);
                 AllMoleculeInScene.RemoveAt(i);
                 MoleculeNameUIList.RemoveAt(i);
             }
@@ -142,8 +142,10 @@ public class SimulationService : MonoBehaviour {
         for (int i = 0; i < AllMoleculeInScene.Count; i++)
         {
             Destroy(AllMoleculeInScene[i]);
+            Destroy(MoleculeNameUIList[i].gameObject);
         }
         AllMoleculeInScene.Clear();
+        MoleculeNameUIList.Clear();
         moleculeInfos.Clear();
     }
 

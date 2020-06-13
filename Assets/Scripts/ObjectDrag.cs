@@ -2,6 +2,7 @@
 
 public class ObjectDrag : MonoBehaviour {
 
+    public GameObject Atom;
     private Vector3 screenPoint;
     private Vector3 offset;
     private Vector3 scanPos;
@@ -16,7 +17,7 @@ public class ObjectDrag : MonoBehaviour {
 
     void Start()
     {
-        sensitivity = 0.4f;
+        sensitivity = 0.2f;
         rotation = Vector3.zero;
     }
 
@@ -50,16 +51,18 @@ public class ObjectDrag : MonoBehaviour {
         {
             mouseOffset = (Input.mousePosition - mouseReference);
 
+            rotation.x = (mouseOffset.z + mouseOffset.x) * sensitivity;
             rotation.y = -(mouseOffset.x + mouseOffset.y) * sensitivity;
+            rotation.z = (mouseOffset.y + mouseOffset.z) * sensitivity;
 
-            transform.Rotate(rotation);
+            Atom.transform.Rotate(rotation);
 
             mouseReference = Input.mousePosition;
-        }
 
-        if(isRotating && Input.GetMouseButtonUp(1))
-        {
-            isRotating = false;
+            if (Input.GetMouseButtonUp(1))
+            {
+                isRotating = false;
+            }
         }
     }
 

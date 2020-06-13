@@ -2756,7 +2756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Building:'
+  m_Text: 'Molecules:'
 --- !u!222 &1461219088
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &916615381629092478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3983051746265655573}
+  m_Layer: 0
+  m_Name: Atoms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3983051746265655573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916615381629092478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4105146649261077936}
+  - {fileID: 4105146649124564524}
+  - {fileID: 4105146649203079468}
+  - {fileID: 4105146649743880555}
+  - {fileID: 4105146650302844167}
+  m_Father: {fileID: 4105146650368791782}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4105146649124564525
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,8 +65,8 @@ Transform:
   m_LocalPosition: {x: 0.49999988, y: -0.265, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
-  m_Father: {fileID: 4105146650368791782}
-  m_RootOrder: 2
+  m_Father: {fileID: 3983051746265655573}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4105146649124564497
 MeshFilter:
@@ -123,8 +158,8 @@ Transform:
   m_LocalPosition: {x: -0.36874998, y: 0, z: -0.305}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
-  m_Father: {fileID: 4105146650368791782}
-  m_RootOrder: 3
+  m_Father: {fileID: 3983051746265655573}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4105146649203079441
 MeshFilter:
@@ -220,7 +255,7 @@ Transform:
   - {fileID: 4105146649443768670}
   - {fileID: 4105146649854227096}
   - {fileID: 4105146650228771886}
-  m_Father: {fileID: 4105146650368791782}
+  m_Father: {fileID: 3983051746265655573}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4105146649261077941
@@ -459,12 +494,12 @@ RectTransform:
   m_Children:
   - {fileID: 4105146649882387382}
   m_Father: {fileID: 4105146650368791782}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1024, y: 768}
+  m_AnchoredPosition: {x: 0, y: 0.714}
+  m_SizeDelta: {x: 848.7, y: 182.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4105146649464324560
 Canvas:
@@ -556,8 +591,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
-  m_Father: {fileID: 4105146650368791782}
-  m_RootOrder: 4
+  m_Father: {fileID: 3983051746265655573}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4105146649743880552
 MeshFilter:
@@ -798,7 +833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: 183}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 750, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4105146649882387380
@@ -1107,8 +1142,8 @@ Transform:
   m_LocalPosition: {x: 0.46625006, y: 0.17625, z: -0.2675}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
-  m_Father: {fileID: 4105146650368791782}
-  m_RootOrder: 5
+  m_Father: {fileID: 3983051746265655573}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4105146650302844164
 MeshFilter:
@@ -1202,12 +1237,8 @@ Transform:
   m_LocalPosition: {x: 13.69, y: 0, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
-  - {fileID: 4105146649261077936}
   - {fileID: 4105146649464324563}
-  - {fileID: 4105146649124564524}
-  - {fileID: 4105146649203079468}
-  - {fileID: 4105146649743880555}
-  - {fileID: 4105146650302844167}
+  - {fileID: 3983051746265655573}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1283,6 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a822a6ccd1d2344197aac5f58db655b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Atom: {fileID: 916615381629092478}
 --- !u!114 &4160463395834337855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simulationService: {fileID: 0}
   SelectedMolecule: 0
+  Name: 0
 --- !u!1 &4105146650627243335
 GameObject:
   m_ObjectHideFlags: 0

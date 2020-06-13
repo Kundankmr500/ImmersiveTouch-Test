@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: 183}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 750, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1154340645146530944
@@ -202,12 +202,12 @@ RectTransform:
   m_Children:
   - {fileID: 7677760732540645577}
   m_Father: {fileID: 6196744609591273498}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1024, y: 768}
+  m_AnchoredPosition: {x: 0, y: 0.696}
+  m_SizeDelta: {x: 795, y: 186.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7690276830689771045
 Canvas:
@@ -301,10 +301,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
-  - {fileID: 6196744610610915540}
-  - {fileID: 6196744609639985959}
-  - {fileID: 6196744610372720808}
   - {fileID: 2779252641028335159}
+  - {fileID: 2475750542119965045}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -380,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a822a6ccd1d2344197aac5f58db655b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Atom: {fileID: 7375985192522507109}
 --- !u!114 &5764793301717356555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simulationService: {fileID: 0}
   SelectedMolecule: 0
+  Name: 0
 --- !u!1 &6196744609639985958
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
-  m_Father: {fileID: 6196744609591273498}
+  m_Father: {fileID: 2475750542119965045}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6196744609639985954
@@ -661,7 +661,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
-  m_Father: {fileID: 6196744609591273498}
+  m_Father: {fileID: 2475750542119965045}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6196744610372720811
@@ -756,7 +756,7 @@ Transform:
   m_Children:
   - {fileID: 6196744611354943078}
   - {fileID: 6196744610090625345}
-  m_Father: {fileID: 6196744609591273498}
+  m_Father: {fileID: 2475750542119965045}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6196744610610915563
@@ -963,3 +963,36 @@ MonoBehaviour:
   Atom2: {fileID: 6196744609639985958}
   StartWidth: 0.1
   EndWidth: 0.1
+--- !u!1 &7375985192522507109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2475750542119965045}
+  m_Layer: 0
+  m_Name: Atoms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2475750542119965045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7375985192522507109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6196744610610915540}
+  - {fileID: 6196744609639985959}
+  - {fileID: 6196744610372720808}
+  m_Father: {fileID: 6196744609591273498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
